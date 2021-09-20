@@ -20,6 +20,7 @@ function nextButtonEventHandler(){
     if(billAmount.value>0){
         elementsHidden.style.display = "block"
         message.style.display = "none"
+        nextButton.style.display = "none"
     }else{
         message.style.display = "block"
         billAmountValidation();
@@ -34,6 +35,7 @@ function checkButtonEventHandler(){
             var amountLeft = cashGiven.value - billAmount.value
             calculateNoOfNotes(amountLeft)           
         }else{
+            nextButton.style.display = "none"
             message.style.display = "block"
             cashGivenValidation()
         }
