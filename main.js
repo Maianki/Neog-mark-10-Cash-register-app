@@ -66,6 +66,7 @@ function billAmountValidation(){
 }
 
 function calculateNoOfNotes(amountLeft){
+    message.innerText = "The total amount to be returned is "+ amountLeft
     for(var i=0; i<denominations.length;i++){
         var totalNotes = parseInt(amountLeft/denominations[i])
         amountLeft = amountLeft % denominations[i]
